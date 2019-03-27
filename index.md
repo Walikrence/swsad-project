@@ -29,8 +29,7 @@
 * 9、成品展示
     - 9.1 XX短视频
     - 9.2 XX短视频
-* X1 [meeting-records](x1-meetings)
-    - inception meeting (yy/mm/dd)
+* X1 meeting-records
     - [Inception meeting (2019/03/27)](X1-inception-meeting)
 * X2 [KANBAN](X2-kanban)
 * X3 [auditing-records](x3-auditing)
