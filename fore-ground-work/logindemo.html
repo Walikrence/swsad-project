@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+</head>
+
+<body>
+	<div id="container-login">
+		<div class="container-card">
+		  <form>
+		    <div class="text-header">登录</div>
+		    <hr>
+		    <div class="container-input">
+		      <span>账号：</span>
+		      <input type="text" id="input-id" placeholder="账号">
+		    </div>
+		    <div class="container-input">
+		      <span>密码：</span>
+		      <input type="password" id="input-password" placeholder="密码">
+		    </div>
+		    <div id="warning"></div>
+		    <div class="button-login" onclick="window.location.href='register.html'">注册</div>
+		    <div class="button-login" id="btn-login">登录</div>
+		  </form>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="script.js" />
+</html>
