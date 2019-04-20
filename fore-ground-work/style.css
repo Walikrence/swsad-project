@@ -34,7 +34,7 @@
   display: inline-block;
   font-weight: bold;
   width: 80px;
-  margin-left: 80px;
+  margin-left: 70px;
   text-align: right;
 }
 
@@ -70,7 +70,7 @@
   width: 230px;
   height: 35px;
   color: white;
-  background-color: rgb(0, 132, 255);
+  background-color: #199ED8;
   font-size: 19px;
   font-weight: bold;
   border: none;
@@ -86,6 +86,6 @@
 }
 
 #container-login .button-login:hover {
-  background-color: rgb(15, 79, 207);
+  background-color: #2c8ab2;
   cursor: pointer;
 }
