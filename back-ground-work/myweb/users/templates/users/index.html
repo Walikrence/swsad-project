@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'users/style.css'%}">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+</head>
+<body>
+	<div id="container-login">
+		<div class="container-card">
+		  <form>
+		    <div class="text-header">登录</div>
+		    <hr>
+		    <div class="container-input">
+		      <span>账号：</span>
+		      <input type="text" id="input-id" placeholder="账号">
+		    </div>
+		    <div class="container-input">
+		      <span>密码：</span>
+		      <input type="password" id="input-password" placeholder="密码">
+		    </div>
+		    <div id="warning"></div>
+		    <div class="button-login">注册</div>
+		    <div class="button-login" id="btn-login">登录</div>
+		  </form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	$('#btn-login').click(function() {
+	  var id = $("#input-id").val()
+	  var password = $("#input-password").val()
+	  if (id.length == 0) {
+	    $("#warning").text("请填写账号！")
+	  } else if (password.length == 0) {
+	    $("#warning").text("请填写密码！")
+	  } else {
+	    var data = {
+	      "account": id,
+	      "password": password
+	    }
+	    var postData = JSON.stringify(data)
+	    alert(postData)
+	    var _self = this
+	    $.ajax({
+	      type: 'POST',
+	      url: '/users/login',
+	      data: postData,
+	      contentType: 'application/json;charset=utf-8',
+	      dataType: 'json',
+	      timeout: 5000,
+	      success: function(result, xhr) {
+	        //
+	      },
+	      error: function(result, xhr) {
+	        //
+	      }
+	    })
+	  }
+	});
+})
+</script>
+</html>
