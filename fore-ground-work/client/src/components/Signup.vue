@@ -60,7 +60,7 @@ export default {
         this.warning = ''
         //
         axios
-          .post('/users/signup', {
+          .post('http://localhost:8081/users/signup', {
             account: this.account,
             password: this.password
           })
