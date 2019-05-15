@@ -164,7 +164,6 @@ export default {
   -webkit-transition: 0.3s;
   /* Safari 和 Chrome */
   -o-transition: 0.3s;
-  /* Opera */
 }
 
 .button-sign:hover {
