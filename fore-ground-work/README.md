@@ -10,4 +10,10 @@
 
 ## 2019-05-10 添加vue.config.js
 
-[https://wj.qq.com/](https://wj.qq.com/)
+[前端参考页面](https://wj.qq.com/)
+
+## 2019-05-18 新建问卷页面
+
+重建前端项目，不再用vue-cli，UI设计使用Ant-design。
+
+新建问卷页面逻辑完成。

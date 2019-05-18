@@ -1,18 +1,32 @@
 <template>
 <div class="container-card">
-  <div class="text-header">欢迎来到挣闲钱</div>
-  <a-divider />
-  <div class="container-input">
-    <span>账号：</span>
-    <input type="text" v-model="account" placeholder="账号">
-  </div>
-  <div class="container-input">
-    <span>密码：</span>
-    <input type="password" v-model="password" placeholder="密码">
-  </div>
-  <div id="warning">{{warning}}</div>
-  <a-button type="primary" class="button-sign" @click="signupClick">注册</a-button>
-  <a-button type="primary" class="button-sign" @click="signinClick">登录</a-button>
+  <form>
+    <div class="text-header">注册</div>
+    <hr>
+    <div class="container-input">
+      <span>账号：</span>
+      <input type="text" v-model="account" placeholder="账号">
+    </div>
+    <div class="container-input">
+      <span>密码：</span>
+      <input type="password" v-model="password" placeholder="密码">
+    </div>
+    <div class="container-input">
+      <span>确认密码：</span>
+      <input type="password" v-model="rpassword" placeholder="确认密码">
+    </div>
+    <div class="container-input">
+      <span>邮箱：</span>
+      <input type="password" v-model="email" placeholder="邮箱">
+    </div>
+    <div class="container-input">
+      <span>验证码：</span>
+      <input type="password">
+    </div>
+    <div id="warning">{{warning}}</div>
+    <a-button type="primary"  @click="signupClick">注册</div>
+    <a-button type="primary" class="button-sign" @click="signinClick">登录</div>
+  </form>
 </div>
 </template>
 
@@ -24,23 +38,29 @@ export default {
     return {
       account: null,
       password: null,
+      rpassword: null,
+      email: null,
       warning: null
     }
   },
   methods: {
-    signupClick: function () {
-      this.$router.push({ path: '/signup' })
-    },
     signinClick: function () {
+      this.$router.push({ path: '/signin' })
+    },
+    signupClick: function () {
       if (this.isNULL(this.account)) {
-        this.warning = '请输入账号！'
+        this.warning = '请填写账号！'
       } else if (this.isNULL(this.password)) {
-        this.warning = '请输入密码！'
+        this.warning = '请填写密码！'
+      } else if (this.isNULL(this.rpassword)) {
+        this.warning = '请重复密码!'
+      } else if (this.password !== this.rpassword) {
+        this.warning = '两次输入的密码不一致!'
       } else {
         this.warning = ''
         //
         axios
-          .post('http://localhost:8081/users/signin', {
+          .post('http://localhost:8081/users/signup', {
             account: this.account,
             password: this.password
           })
@@ -69,7 +89,7 @@ export default {
 <style scoped>
 .container-card {
   margin-left: calc(50vw - 300px);
-  margin-top: 100px;
+  margin-top: calc(50vh - 230px);
   width: 600px;
   text-align: center;
   padding: 30px;
@@ -126,7 +146,6 @@ export default {
 }
 
 .button-sign {
-  display: block;
   margin: auto;
   margin-top: 15px;
   width: 230px;

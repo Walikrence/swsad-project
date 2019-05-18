@@ -2,7 +2,7 @@
 <div class="container-card">
   <form>
     <div class="text-header">注册</div>
-    <hr>
+    <a-divider />
     <div class="container-input">
       <span>账号：</span>
       <input type="text" v-model="account" placeholder="账号">
@@ -24,8 +24,8 @@
       <input type="password">
     </div>
     <div id="warning">{{warning}}</div>
-    <div class="button-sign" @click="signupClick">注册</div>
-    <div class="button-sign" @click="signinClick">登录</div>
+    <a-button type="primary" class="button-sign" @click="signupClick">注册</a-button>
+    <a-button type="primary" class="button-sign" @click="signinClick">登录</a-button>
   </form>
 </div>
 </template>
@@ -89,7 +89,7 @@ export default {
 <style scoped>
 .container-card {
   margin-left: calc(50vw - 300px);
-  margin-top: calc(50vh - 230px);
+  margin-top: 100px;
   width: 600px;
   text-align: center;
   padding: 30px;
@@ -146,28 +146,12 @@ export default {
 }
 
 .button-sign {
+  display: block;
   margin: auto;
   margin-top: 15px;
-  padding-top: 5px;
   width: 230px;
   height: 35px;
-  color: white;
-  background-color: var(--cyan);
   font-size: 19px;
   font-weight: bold;
-  border: none;
-  /*radius*/
-  border-radius: 3px;
-  transition: 0.3s;
-  -moz-transition: 0.3s;
-  /* Firefox 4 */
-  -webkit-transition: 0.3s;
-  /* Safari 和 Chrome */
-  -o-transition: 0.3s;
-}
-
-.button-sign:hover {
-  background-color: var(--cyan-hover);
-  cursor: pointer;
 }
 </style>

@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Guide from './components/Guide.vue'
-import Signin from './components/Signin.vue'
-import Signup from './components/Signup.vue'
-import Home from './components/Home.vue'
-import NewQn from './components/NewQn.vue'
+import Guide from '@/components/Guide.vue'
+import Signin from '@/components/Signin.vue'
+import Signup from '@/components/Signup.vue'
+import Home from '@/components/Home.vue'
+import NewQn from '@/components/NewQn.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    { path: '/', redirect: '/guide' },
     {
       path: '/guide',
       name: 'guide',

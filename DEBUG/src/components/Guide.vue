@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="header-container">
+  <header>
     <div class="header-nav">
       <div class="header-title" @click="homeClick">挣闲钱</div>
       <div class="header-nav-cell">创建问卷</div>
@@ -10,7 +10,7 @@
     <div class="header-account">
       <a-button type="primary" class="button-sign" @click="jumpToSignin">登录</a-button>
     </div>
-  </div>
+  </header>
   <div class="container-guide-display">
     <router-view></router-view>
   </div>
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-.header-container {
+header {
   position: fixed;
   width: 100%;
   height: 60px;
@@ -87,8 +87,7 @@ export default {
 }
 
 .container-guide-display {
-  margin-top: 60px;
-  height: calc(100vh - 60px);
-  overflow: auto;
+  margin-top: 80px;
+  min-height: calc(100vh - 60px);
 }
 </style>
