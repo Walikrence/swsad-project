@@ -75,3 +75,59 @@
 ​		返回 paper 实例的list
 
 ​		ApiResponse
+
+## 几个类的具体
+```
+User{
+  id	integer($int64)
+  nickname	string
+  studentid	string
+  age	integer
+  sex	string
+  grade	string
+  major	string
+  image	string
+  email	string
+  password	string
+  phone	string
+  userStatus	integer($int32)
+  User role
+}
+
+Paper{
+  id	integer($int64)
+  creator	string
+  title	string
+  detail	string
+  questions	array(Question)
+  state	integer
+  respondent	array(string)
+  createdAt	Date
+  default: new Date()
+  closingDate	Date
+  default: new Date()
+  reward	integer
+}
+
+Question{
+    type	integer
+    content	string
+    items	array(string)
+    required	bool
+    whether it is must
+    anwser	array(string)
+    array of answer list
+}
+ApiResponse{
+    code	integer($int32)
+    state	bool
+    表明是否成功了 0 成功 1 失败
+
+    message	string
+    表明成功或者失败的具体信息
+
+}
+
+
+```
+
