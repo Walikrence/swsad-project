@@ -16,7 +16,7 @@
 
 
 
-#### 修改信息 post  /user /{username}
+#### 修改用户信息 post  /user /{username}
 
 ​			上传 modifyRequest
 
@@ -54,14 +54,14 @@
 
 #### 更新问卷   post /papers/{paper_id}
 
-​		上传修改的属性的json数组 如 {title： tests ，detail：这是detail }
+​		上传modifyRequest
 
 ​		返回ApiResponse的 json 表示结果
 
 
 
 #### 删除问卷  post  /papers /{paper_id}
-​   上传modifyRequest        
+​               上传modifyRequest        
         
 ​		返回ApiResponse  json 
 
@@ -123,6 +123,7 @@ ApiResponse{
 //为了把put  delete 全改成post所设置的对象
 modifyRequest {
     requestTpye： string 请求的类型  （有删除，更新等   update， delete）
+    modifyClass： string  要修改的对象  （paper  user）
     userid：string
     data：{
         [title： tests ，detail：这是detail ] //修改的属性的json数组 , 如果是删除则没有
