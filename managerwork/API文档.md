@@ -90,8 +90,7 @@ User{
   email	string
   password	string
   phone	string
-  userStatus	integer($int32)
-  User role
+  User role   / 用户角色
 }
 
 Paper{
