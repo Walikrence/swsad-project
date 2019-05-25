@@ -10,7 +10,7 @@
 
 #### 登录   post  /user 
 
-​		上传username password
+​		上传username password     
 
 ​		返回ApiResponse（token）
 
@@ -34,7 +34,7 @@
 
 #### 发布问卷  post   /papers 只是状态变化了
 
-​		上传 json {state：1}
+​		上传 json {state：1}   // 1 
 
 ​		返回ApiResponse的 json 表示结果
 
@@ -100,7 +100,7 @@ Paper{
   title	string   //问卷标题
   detail	string
   questions	array(Question)   // 问卷题目列表  是题目的list
-  state	integer       //问卷状态  开放/关闭
+  state	integer       //问卷状态  0 未发布/1 发布
   respondent	array(string)   //回答者  回答过问卷的user
   createdAt	Date
   closingDate	Date
