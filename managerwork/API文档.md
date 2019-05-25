@@ -16,9 +16,9 @@
 
 
 
-#### 修改信息 put  /user /{username}
+#### 修改信息 post  /user /{username}
 
-​			上传修改的属性的json数组 如    {major： 软件工程，age： 20 }
+​			上传 modifyRequest
 
 ​			返回ApiResponse
 
@@ -60,8 +60,9 @@
 
 
 
-#### 删除问卷  delete  /papers /{paper_id}
-
+#### 删除问卷  post  /papers /{paper_id}
+​   上传modifyRequest        
+        
 ​		返回ApiResponse  json 
 
 
@@ -118,6 +119,14 @@ ApiResponse{
     code	integer($int32)
     state	bool  //表明是否成功了 0 成功 1 失败
     message	string  //表明成功或者失败的具体信息
+}
+//为了把put  delete 全改成post所设置的对象
+modifyRequest {
+    requestTpye： string 请求的类型  （有删除，更新等   update， delete）
+    userid：string
+    data：{
+        [title： tests ，detail：这是detail ] //修改的属性的json数组 , 如果是删除则没有
+    } 
 }
 
 
