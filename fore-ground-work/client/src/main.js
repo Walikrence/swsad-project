@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 /* ant-design */
 import 'ant-design-vue/dist/antd.css'
-import {Button, Divider, Input, Checkbox, Icon, Radio, InputNumber} from 'ant-design-vue'
+import {Button, Divider, Input, Checkbox, Icon, Radio, InputNumber, List, Card} from 'ant-design-vue'
 
 Vue.use(Button)
 Vue.use(Divider)
@@ -13,6 +13,8 @@ Vue.use(Checkbox)
 Vue.use(Icon)
 Vue.use(Radio)
 Vue.use(InputNumber)
+Vue.use(List)
+Vue.use(Card)
 
 Vue.config.productionTip = false
 

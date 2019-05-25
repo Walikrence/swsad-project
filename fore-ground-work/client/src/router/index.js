@@ -6,6 +6,7 @@ import Signin from '@/components/Signin.vue'
 import Signup from '@/components/Signup.vue'
 import Home from '@/components/Home.vue'
 import NewQn from '@/components/NewQn.vue'
+import QnList from '@/components/QnList.vue'
 
 Vue.use(Router)
 
@@ -19,7 +20,8 @@ export default new Router({
       redirect: '/guide/home',
       children: [
         { path: 'home', name: 'home', component: Home },
-        { path: 'newQn', name: 'newQn', component: NewQn }
+        { path: 'newQn', name: 'newQn', component: NewQn },
+        { path: 'qnList', name: 'qnList', component: QnList }
       ]
     },
     { path: '/signin', name: 'signin', component: Signin },

@@ -1,12 +1,21 @@
 <template>
 <div>
   <div class="banner-container">
-   <div class="banner-cell banner-new-qn" @click="newQnClick">创建空白问卷</div>
-   <div class="banner-cell banner-new-qn1">选择问卷模板</div>
-   <div class="banner-cell banner-new-qn2">文本编辑问卷</div>
+    <div class="banner-cell banner-new-qn" @click="newQnClick">
+      <a-icon class="banner-icon" type="plus-square" />
+      创建空白问卷
+    </div>
+    <div class="banner-cell banner-new-qn1">
+      <a-icon class="banner-icon" type="diff" />
+      banner2
+    </div>
+    <div class="banner-cell banner-new-qn2" @click="ediyQnClick">
+      <a-icon class="banner-icon" type="edit" />
+      编辑问卷
+    </div>
   </div>
   <div class="bottom-container">
-   <div>copyright fangege</div>
+    <!-- <div>copyright</div> -->
   </div>
 </div>
 </template>
@@ -22,6 +31,9 @@ export default {
   methods: {
     newQnClick: function () {
       this.$router.push({ path: '/guide/newQn' })
+    },
+    ediyQnClick: function () {
+      this.$router.push({ path: '/guide/qnList' })
     }
   }
 }
@@ -41,6 +53,10 @@ export default {
   color: white;
 }
 
+.banner-cell:hover {
+  cursor: pointer;
+}
+
 .banner-new-qn {
   background-color: rgba(46, 140, 219, 0.95);
 }
@@ -51,6 +67,11 @@ export default {
 
 .banner-new-qn2 {
   background-color: rgba(144, 214, 126, 0.94);
+}
+
+.banner-icon {
+  display: inline-block;
+  font-size: 60px;
 }
 
 .bottom-container {

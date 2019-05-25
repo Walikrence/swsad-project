@@ -56,13 +56,19 @@
       </div>
     </div>
     <!-- 问题列表结束 -->
-    <a-button type="primary" class="new-qn-button" >创建问卷</a-button>
+    <a-button type="primary" class="new-qn-button" @click="newQn">创建问卷</a-button>
   </div>
 </div>
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
+
+// debug axios
+axios.interceptors.request.use(request => {
+  console.log('Starting Request', request)
+  return request
+})
 
 export default {
   data: function () {
@@ -89,6 +95,16 @@ export default {
     },
     removeQ: function (i) {
       this.qn.q.splice(i, 1)
+    },
+    newQn: function () {
+      axios
+        .post('http://localhost:8081/papers/newpaper', {
+          paper: this.qn
+        })
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => alert(error))
     }
   }
 }
@@ -134,7 +150,7 @@ export default {
 
 .qn-title {
   display: inline-block;
-  width: 100px;
+  width: 85px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -155,6 +171,8 @@ export default {
 
 .qn-delete-button {
   display: inline-block;
+  font-size: 18px;
+  color: red;
 }
 
 .new-qn-button {

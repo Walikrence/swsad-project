@@ -3,9 +3,9 @@
   <div class="header-container">
     <div class="header-nav">
       <div class="header-title" @click="homeClick">挣闲钱</div>
-      <div class="header-nav-cell">创建问卷</div>
-      <div class="header-nav-cell">我的问卷</div>
-      <div class="header-nav-cell">帮助中心</div>
+      <div class="header-nav-cell">menu1</div>
+      <div class="header-nav-cell">menu2</div>
+      <div class="header-nav-cell">menu3</div>
     </div>
     <div class="header-account">
       <a-button type="primary" class="button-sign" @click="jumpToSignin">登录</a-button>
