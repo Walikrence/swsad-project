@@ -66,3 +66,21 @@ from django.views.decorators.csrf import csrf_exempt
 def some_view(request):
     #...
 ```
+model范例
+```py
+from django.db import models
+
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+```
+
+---
+[登陆注册参考资料](https://www.cnblogs.com/derek1184405959/p/8567522.html)
