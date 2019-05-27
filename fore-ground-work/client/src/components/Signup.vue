@@ -60,7 +60,7 @@ export default {
         this.warning = ''
         //
         axios
-          .post('http://localhost:8081/users/signup', {
+          .post('/users/signup', {
             account: this.account,
             password: this.password
           })
@@ -80,7 +80,7 @@ export default {
       if (data.match(/^([0-9]*)$/) && data.length === 8) {
         return true
       }
-      return true
+      return false
     }
   }
 }

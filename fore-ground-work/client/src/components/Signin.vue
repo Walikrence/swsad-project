@@ -33,22 +33,33 @@ export default {
     },
     signinClick: function () {
       if (this.isNULL(this.account)) {
-        this.warning = '请输入账号！'
-      } else if (this.isNULL(this.password)) {
-        this.warning = '请输入密码！'
-      } else {
-        this.warning = ''
-        //
-        axios
-          .post('http://localhost:8081/users/signin', {
-            account: this.account,
-            password: this.password
-          })
-          .then((response) => {
-            console.log(response)
-          })
-          .catch((error) => alert(error))
+        this.warning = '请输入账号'
+        return
       }
+      if (this.isNULL(this.password)) {
+        this.warning = '请输入密码'
+        return
+      }
+      if (!this.isValidId(this.account)) {
+        this.warning = '账号格式不正确，请输入6-20个字符'
+        return
+      }
+      if (!this.isValidId(this.password)) {
+        this.warning = '密码格式不正确，请输入6-20个字符'
+        return
+      }
+      this.warning = ''
+      //
+      axios
+        .post('http://localhost:8000/users/signin', {
+          account: this.account,
+          password: this.password
+        })
+        .then((response) => {
+          console.log(response)
+          this.$router.push({ path: '/guide' })
+        })
+        .catch((error) => alert(error))
     },
     isNULL: function (data) {
       if (data == null || data.length === 0) {
@@ -57,10 +68,11 @@ export default {
       return false
     },
     isValidId: function (data) {
-      if (data.match(/^([0-9]*)$/) && data.length === 8) {
+      // if (data.match(/^([0-9]*)$/) && data.length === 8) {
+      if (data.length >= 6 && data.length <= 20) {
         return true
       }
-      return true
+      return false
     }
   }
 }

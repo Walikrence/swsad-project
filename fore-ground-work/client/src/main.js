@@ -2,9 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-/* ant-design */
+// ant-design
 import 'ant-design-vue/dist/antd.css'
 import {Button, Divider, Input, Checkbox, Icon, Radio, InputNumber, List, Card} from 'ant-design-vue'
+// axios config
+import axios from 'axios'
+
+axios.defaults.baseURL = 'http://localhost:8000'
 
 Vue.use(Button)
 Vue.use(Divider)

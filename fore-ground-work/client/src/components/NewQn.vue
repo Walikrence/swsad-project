@@ -66,7 +66,7 @@ import axios from 'axios'
 
 // debug axios
 axios.interceptors.request.use(request => {
-  console.log('Starting Request', request)
+  console.log('Client Request Debug: ', request)
   return request
 })
 

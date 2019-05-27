@@ -11,6 +11,13 @@ export default new Vuex.Store({
 
   },
   actions: {
-
+    GET ({ state, commit }, urlpack) {
+      console.log('Requesting', urlpack.url)
+      return Vue.http.get(urlpack.url, { params: urlpack.params })
+    },
+    POST ({ state, commit }, urlpack) {
+      console.log('Requesting', urlpack.url, 'with POST')
+      return Vue.http.post(urlpack.url, urlpack.body, { params: urlpack.params })
+    }
   }
 })
