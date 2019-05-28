@@ -74,7 +74,7 @@
 
 **用例图**
 
-![](D:\系分\swsad-project\managerwork\Use Case Diagram\图片1.png)
+![](.\图片\注册登录活动图.png)
 
 
 ### Use Case 2.2
@@ -89,4 +89,4 @@
 
 
 
-![](D:\系分\swsad-project\managerwork\Use Case Diagram\图片2.png)
+![问卷系统活动图](.\图片\问卷系统活动图.png)
