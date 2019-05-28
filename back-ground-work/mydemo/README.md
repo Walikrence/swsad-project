@@ -82,6 +82,12 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 ```
 
+激活模型
+```sh
+python3 manage.py makemigrations users
+python3 manage.py migrate
+ ```
+
 ---
 [登陆注册参考资料](https://www.cnblogs.com/derek1184405959/p/8567522.html)
 [django上传图片并使用](https://blog.csdn.net/boycycyzero/article/details/43820481)

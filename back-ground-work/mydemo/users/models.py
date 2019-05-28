@@ -7,7 +7,7 @@ import django.utils.timezone as timezone
 class User(models.Model):
 	username = models.CharField(max_length = 20)
 	password = models.CharField(max_length = 20)
-	avatar = models.ImageField(upload_to='avatar')
+	avatar = models.ImageField(upload_to='avatar', default='image.jpg')
 	#---
 	nickname = models.CharField(max_length = 20, default = 'not filled')
 	studentid = models.IntegerField(default = 0)
