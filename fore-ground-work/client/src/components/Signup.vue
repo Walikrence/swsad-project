@@ -19,10 +19,6 @@
       <span>邮箱：</span>
       <input type="password" v-model="email" placeholder="邮箱">
     </div>
-    <div class="container-input">
-      <span>验证码：</span>
-      <input type="password">
-    </div>
     <div id="warning">{{warning}}</div>
     <a-button type="primary" class="button-sign" @click="signupClick">注册</a-button>
     <a-button type="primary" class="button-sign" @click="signinClick">登录</a-button>
@@ -49,26 +45,50 @@ export default {
     },
     signupClick: function () {
       if (this.isNULL(this.account)) {
-        this.warning = '请填写账号！'
-      } else if (this.isNULL(this.password)) {
-        this.warning = '请填写密码！'
-      } else if (this.isNULL(this.rpassword)) {
-        this.warning = '请重复密码!'
-      } else if (this.password !== this.rpassword) {
-        this.warning = '两次输入的密码不一致!'
-      } else {
-        this.warning = ''
-        //
-        axios
-          .post('/users/signup', {
-            account: this.account,
-            password: this.password
-          })
-          .then((response) => {
-            console.log(response)
-          })
-          .catch((error) => alert(error))
+        this.warning = '请填写账号'
+        return
       }
+      if (!this.isValidId(this.account)) {
+        this.warning = '账号格式不正确，请输入6-20个字符'
+        return
+      }
+      if (this.isNULL(this.password)) {
+        this.warning = '请填写密码'
+        return
+      }
+      if (!this.isValidId(this.password)) {
+        this.warning = '密码格式不正确，请输入6-20个字符'
+        return
+      }
+      if (this.isNULL(this.rpassword)) {
+        this.warning = '请重复密码'
+        return
+      }
+      if (this.password !== this.rpassword) {
+        this.warning = '两次输入的密码不一致'
+        return
+      }
+      if (this.isNULL(this.email)) {
+        this.warning = '请填写邮箱'
+        return
+      }
+      if (!this.isValidEmail(this.email)) {
+        this.warning = '邮箱格式不正确，请输入小于20个字符'
+        return
+      }
+      this.warning = ''
+      //
+      axios
+        .post('/users/register', {
+          account: this.account,
+          password: this.password,
+          email: this.email
+        })
+        .then((response) => {
+          console.log(response)
+          alert('注册成功')
+        })
+        .catch((error) => alert(error))
     },
     isNULL: function (data) {
       if (data == null || data.length === 0) {
@@ -77,7 +97,13 @@ export default {
       return false
     },
     isValidId: function (data) {
-      if (data.match(/^([0-9]*)$/) && data.length === 8) {
+      if (data.length >= 6 && data.length <= 20) {
+        return true
+      }
+      return false
+    },
+    isValidEmail: function (data) {
+      if (data.length > 0 && data.length <= 20) {
         return true
       }
       return false

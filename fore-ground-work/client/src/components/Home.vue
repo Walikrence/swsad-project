@@ -5,11 +5,11 @@
       <a-icon class="banner-icon" type="plus-square" />
       创建空白问卷
     </div>
-    <div class="banner-cell banner-new-qn1">
+    <div class="banner-cell banner-new-qn1" @click="fillQnClick">
       <a-icon class="banner-icon" type="diff" />
-      banner2
+      填写问卷
     </div>
-    <div class="banner-cell banner-new-qn2" @click="ediyQnClick">
+    <div class="banner-cell banner-new-qn2" @click="editQnClick">
       <a-icon class="banner-icon" type="edit" />
       编辑问卷
     </div>
@@ -32,8 +32,11 @@ export default {
     newQnClick: function () {
       this.$router.push({ path: '/guide/newQn' })
     },
-    ediyQnClick: function () {
-      this.$router.push({ path: '/guide/qnList' })
+    fillQnClick: function () {
+      this.$router.push({ path: '/guide/allQnList' })
+    },
+    editQnClick: function () {
+      this.$router.push({ path: '/guide/myQnList' })
     }
   }
 }

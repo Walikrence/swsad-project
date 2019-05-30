@@ -1,6 +1,7 @@
 <template>
 <div>
   <div class="header-container">
+    <span class="header-title">我创建的问卷</span>
     <a-button type="primary" class="new-qn-button" @click="newQnClick">
       <a-icon type="plus" />创建问卷
     </a-button>
@@ -8,10 +9,10 @@
   <div class="list-container">
     <a-list itemLayout="vertical" size="large" :dataSource="qnList">
       <a-list-item slot="renderItem" slot-scope="item, index">
-        <a-card hoverable :title="item.title">
+        <a-card hoverable :title="item.title" @click="editQnClick(item)">
           <!-- <img alt="qncover" src="@/assets/qncover.jpg" slot="extra" class="card-cover"/> -->
-          <span class="list-card-info">{{tmpqninfo1}}</span>
-          <span class="list-card-info">{{tmpqninfo2}}</span>
+          <span class="list-card-time">{{tmpqninfo1}}</span>
+          <span class="list-card-name">{{tmpqninfo2}}</span>
         </a-card>
       </a-list-item>
     </a-list>
@@ -59,8 +60,9 @@ export default {
     newQnClick: function () {
       this.$router.push({ path: '/guide/newQn' })
     },
-    ediyQnClick: function () {
-      this.$router.push({ path: '/guide/qnList' })
+    editQnClick: function (qn) {
+      console.log(qn)
+      this.$router.push({ path: '/guide/editQn' })
     }
   }
 }
@@ -72,12 +74,20 @@ export default {
   height: 60px;
   top: 0;
   left: 0;
+  line-height: 60px;
   background-color: white;
 }
 
+.header-title {
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 .new-qn-button {
+  float: right;
   margin-top: 12.5px;
-  margin-left: 100px;
+  margin-right: 40px;
   width: 120px;
   height: 35px;
 }
@@ -86,7 +96,11 @@ export default {
   margin: 20px;
 }
 
-.list-card-info {
+.list-card-time {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.list-card-name {
   margin-left: 20px;
   color: rgba(0, 0, 0, 0.45);
 }

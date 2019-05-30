@@ -5,8 +5,14 @@ import Guide from '@/components/Guide.vue'
 import Signin from '@/components/Signin.vue'
 import Signup from '@/components/Signup.vue'
 import Home from '@/components/Home.vue'
+
 import NewQn from '@/components/NewQn.vue'
-import QnList from '@/components/QnList.vue'
+
+import AllQnList from '@/components/AllQnList.vue'
+import FillQn from '@/components/FillQn.vue'
+
+import MyQnList from '@/components/MyQnList.vue'
+import EditQn from '@/components/EditQn.vue'
 
 Vue.use(Router)
 
@@ -21,7 +27,10 @@ export default new Router({
       children: [
         { path: 'home', name: 'home', component: Home },
         { path: 'newQn', name: 'newQn', component: NewQn },
-        { path: 'qnList', name: 'qnList', component: QnList }
+        { path: 'allQnList', name: 'allQnList', component: AllQnList },
+        { path: 'fillQn', name: 'fillQn', component: FillQn },
+        { path: 'myQnList', name: 'myQnList', component: MyQnList },
+        { path: 'editQn', name: 'editQn', component: EditQn }
       ]
     },
     { path: '/signin', name: 'signin', component: Signin },

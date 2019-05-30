@@ -36,12 +36,12 @@ export default {
         this.warning = '请输入账号'
         return
       }
-      if (this.isNULL(this.password)) {
-        this.warning = '请输入密码'
-        return
-      }
       if (!this.isValidId(this.account)) {
         this.warning = '账号格式不正确，请输入6-20个字符'
+        return
+      }
+      if (this.isNULL(this.password)) {
+        this.warning = '请输入密码'
         return
       }
       if (!this.isValidId(this.password)) {

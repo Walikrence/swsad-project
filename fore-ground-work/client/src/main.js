@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 // ant-design
 import 'ant-design-vue/dist/antd.css'
-import {Button, Divider, Input, Checkbox, Icon, Radio, InputNumber, List, Card} from 'ant-design-vue'
+import {Button, Divider, Input, Checkbox, Icon, Radio, InputNumber, List, Card, Progress, Affix} from 'ant-design-vue'
 // axios config
 import axios from 'axios'
 
@@ -19,6 +19,8 @@ Vue.use(Radio)
 Vue.use(InputNumber)
 Vue.use(List)
 Vue.use(Card)
+Vue.use(Progress)
+Vue.use(Affix)
 
 Vue.config.productionTip = false
 

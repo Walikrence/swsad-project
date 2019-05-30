@@ -56,7 +56,7 @@
       </div>
     </div>
     <!-- 问题列表结束 -->
-    <a-button type="primary" class="new-qn-button" @click="newQn">创建问卷</a-button>
+    <a-button type="primary" class="new-qn-button" @click="editQn">修改问卷</a-button>
   </div>
 </div>
 </template>
@@ -64,21 +64,15 @@
 <script>
 import axios from 'axios'
 
-// debug axios
-axios.interceptors.request.use(request => {
-  console.log('Client Request Debug: ', request)
-  return request
-})
-
 export default {
   data: function () {
     return {
       qn: {
         title: null,
         q: [
-          // {type: 'single', name: 'sn', cnum: 3, choices: ['c1', 'c2', 'c3']},
-          // {type: 'multi', name: 'mn', cnum: 3, choices: ['c11', 'c22', 'c33']},
-          // {type: 'text', name: 'name'}
+          {type: 'single', name: 'sn', cnum: 3, choices: ['c1', 'c2', 'c3']},
+          {type: 'multi', name: 'mn', cnum: 3, choices: ['c11', 'c22', 'c33']},
+          {type: 'text', name: 'name'}
         ]
       }
     }
@@ -96,9 +90,9 @@ export default {
     removeQ: function (i) {
       this.qn.q.splice(i, 1)
     },
-    newQn: function () {
+    editQn: function () {
       axios
-        .post('/papers/newpaper', {
+        .post('/papers/editpaper', {
           paper: this.qn
         })
         .then((response) => {
