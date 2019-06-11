@@ -1,4 +1,23 @@
+# 环境要求
+
+
+
+```
+# Django 版本2.1.7 而且是 python3
+pip install Django==2.1.7
+# 这个也要安装
+pip install django-cors-headers
+#运行
+python manage.py runserver 8000
+
+```
+
+
+
+
+
 # 快速开始
+
 ~~~sh
 python3 manage.py runserver 8000
 ~~~
@@ -86,7 +105,7 @@ class Choice(models.Model):
 ```sh
 python3 manage.py makemigrations users
 python3 manage.py migrate
- ```
+```
 
 ---
 [登陆注册参考资料](https://www.cnblogs.com/derek1184405959/p/8567522.html)
