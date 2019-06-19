@@ -1,27 +1,15 @@
 <template>
 <div>
-  <div class="banner-container">
-    <div class="banner-cell banner-new-qn" @click="newQnClick">
-      <a-icon class="banner-icon" type="plus-square" />
-      创建空白问卷
-    </div>
-    <div class="banner-cell banner-new-qn1" @click="fillQnClick">
-      <a-icon class="banner-icon" type="diff" />
-      填写问卷
-    </div>
-    <div class="banner-cell banner-new-qn2" @click="editQnClick">
-      <a-icon class="banner-icon" type="edit" />
-      编辑问卷
-    </div>
+  <div class="banner-cell banner-qn" @click="qnClick">
+    问卷系统
   </div>
-  <div class="bottom-container">
-    <!-- <div>copyright</div> -->
+  <div class="banner-cell banner-qn" @click="taskClick">
+    小任务系统
   </div>
 </div>
 </template>
 
 <script>
-// import axios from 'axios'
 
 export default {
   data: function () {
@@ -29,61 +17,43 @@ export default {
     }
   },
   methods: {
-    newQnClick: function () {
-      this.$router.push({ path: '/guide/newQn' })
+    qnClick: function () {
+      this.$router.push({ path: '/guide/qnHome' })
     },
-    fillQnClick: function () {
-      this.$router.push({ path: '/guide/allQnList' })
-    },
-    editQnClick: function () {
-      this.$router.push({ path: '/guide/myQnList' })
+    taskClick: function () {
+      this.$router.push({ path: '/guide/taskHome' })
     }
   }
 }
 </script>
 
 <style scoped>
-.banner-container {
-}
-
 .banner-cell {
   float: left;
-  width: 33.3%;
-  height: 500px;
-  line-height: 500px;
+  width: 400px;
+  height: 450px;
+  margin-top: calc((100vh - 510px)/2);
+  margin-left: calc((100vw - 800px)/3);
+  line-height: 450px;
   text-align: center;
   font-size: 24px;
   color: white;
+  /*radius*/
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .banner-cell:hover {
   cursor: pointer;
+  transform: translate(-1px, -3px);
+  box-shadow: 0 3px 3px var(--grey-shadow);
 }
 
-.banner-new-qn {
+.banner-qn {
   background-color: rgba(46, 140, 219, 0.95);
 }
 
-.banner-new-qn1 {
+.banner-task {
   background-color: rgba(71, 157, 230, 0.97);
-}
-
-.banner-new-qn2 {
-  background-color: rgba(144, 214, 126, 0.94);
-}
-
-.banner-icon {
-  display: inline-block;
-  font-size: 60px;
-}
-
-.bottom-container {
-  text-align: center;
-  font-size: 14px;
-}
-
-.button-sign:hover {
-  background-color: var(--cyan-hover);
-  cursor: pointer;
 }
 </style>
