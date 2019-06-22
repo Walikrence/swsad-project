@@ -159,7 +159,7 @@ export default {
   display: inline-block;
   margin-left: 20px;
   margin-top: 10px;
-  width: 60px;
+  width: 65px;
   font-size: 16px;
 }
 

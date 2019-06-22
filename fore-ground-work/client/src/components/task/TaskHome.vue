@@ -1,17 +1,13 @@
 <template>
 <div>
   <div class="banner-container">
-    <div class="banner-cell banner-new-qn">
+    <div class="banner-cell banner-task1" @click="taskClick">
       <a-icon class="banner-icon" type="plus-square" />
       校园互助任务
     </div>
-    <div class="banner-cell banner-new-qn1">
+    <div class="banner-cell banner-task2" @click="tradeClick">
       <a-icon class="banner-icon" type="diff" />
       校园交易站
-    </div>
-    <div class="banner-cell banner-new-qn2" >
-      <a-icon class="banner-icon" type="edit" />
-      ---
     </div>
   </div>
   <div class="bottom-container">
@@ -29,6 +25,9 @@ export default {
     }
   },
   methods: {
+    taskClick: function () {
+      this.$router.push({ path: '/guide/taskList' })
+    }
   }
 }
 </script>
@@ -39,7 +38,7 @@ export default {
 
 .banner-cell {
   float: left;
-  width: 33.3%;
+  width: 50%;
   height: 500px;
   line-height: 500px;
   text-align: center;
@@ -51,15 +50,11 @@ export default {
   cursor: pointer;
 }
 
-.banner-new-qn {
+.banner-task1 {
   background-color: rgba(46, 140, 219, 0.95);
 }
 
-.banner-new-qn1 {
-  background-color: rgba(71, 157, 230, 0.97);
-}
-
-.banner-new-qn2 {
+.banner-task2 {
   background-color: rgba(144, 214, 126, 0.94);
 }
 

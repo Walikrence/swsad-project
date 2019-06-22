@@ -3,9 +3,9 @@
   <div class="header-container">
     <div class="header-nav">
       <div class="header-title" @click="homeClick">挣闲钱</div>
-      <div class="header-nav-cell">menu1</div>
-      <div class="header-nav-cell">menu2</div>
-      <div class="header-nav-cell">menu3</div>
+      <div class="header-nav-cell" @click="qnClick">问卷系统</div>
+      <div class="header-nav-cell" @click="taskClick">小任务系统</div>
+      <div class="header-nav-cell">社区系统</div>
     </div>
     <div class="header-account">
       <a-button type="primary" class="button-sign" @click="jumpToSignin">登录</a-button>
@@ -31,6 +31,12 @@ export default {
     },
     jumpToSignin: function () {
       this.$router.push({ path: '/signin' })
+    },
+    qnClick: function () {
+      this.$router.push({ path: '/guide/qnHome' })
+    },
+    taskClick: function () {
+      this.$router.push({ path: '/guide/taskHome' })
     }
   }
 }
@@ -65,10 +71,18 @@ export default {
   color: var(--cyan);
 }
 
+.header-title:hover {
+  cursor: pointer;
+}
+
 .header-nav-cell {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   line-height: 60px;
+}
+
+.header-nav-cell:hover {
+  cursor: pointer;
 }
 
 .header-account {

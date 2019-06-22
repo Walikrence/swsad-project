@@ -15,6 +15,9 @@ import MyQnList from '@/components/questionnaire/MyQnList.vue'
 import EditQn from '@/components/questionnaire/EditQn.vue'
 
 import TaskHome from '@/components/task/TaskHome.vue'
+import TaskList from '@/components/task/TaskList.vue'
+import NewTask from '@/components/task/NewTask.vue'
+import TaskDetail from '@/components/task/TaskDetail.vue'
 
 Vue.use(Router)
 
@@ -29,14 +32,17 @@ export default new Router({
       children: [
         { path: 'home', name: 'home', component: Home },
         // qn
-        { path: 'qnhome', name: 'qnhome', component: QnHome },
+        { path: 'qnHome', name: 'qnHome', component: QnHome },
         { path: 'newQn', name: 'newQn', component: NewQn },
         { path: 'allQnList', name: 'allQnList', component: AllQnList },
         { path: 'fillQn', name: 'fillQn', component: FillQn },
         { path: 'myQnList', name: 'myQnList', component: MyQnList },
         { path: 'editQn', name: 'editQn', component: EditQn },
         // task
-        { path: 'taskhome', name: 'taskhome', component: TaskHome }
+        { path: 'taskHome', name: 'taskHome', component: TaskHome },
+        { path: 'taskList', name: 'taskList', component: TaskList },
+        { path: 'newTask', name: 'newTask', component: NewTask },
+        { path: 'taskDetail', name: 'taskDetail', component: TaskDetail }
       ]
     },
     { path: '/signin', name: 'signin', component: Signin },
