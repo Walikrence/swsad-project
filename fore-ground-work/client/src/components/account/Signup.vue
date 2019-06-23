@@ -79,7 +79,7 @@ export default {
       this.warning = ''
       //
       axios
-        .post('/users/register', {
+        .post('/users/register/', {
           account: this.account,
           password: this.password,
           email: this.email
