@@ -80,7 +80,7 @@ export default {
       //
       axios
         .post('/users/register/', {
-          account: this.account,
+          username: this.account,
           password: this.password,
           email: this.email
         })

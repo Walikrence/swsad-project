@@ -52,7 +52,7 @@ export default {
       //
       axios
         .post('/users/signin/', {
-          account: this.account,
+          username: this.account,
           password: this.password
         })
         .then((response) => {
