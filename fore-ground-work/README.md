@@ -33,3 +33,9 @@
 components文件整理
 
 小任务系统导航界面
+
+---
+
+## problems
+
+多标签页共享localstorage
