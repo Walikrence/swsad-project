@@ -2,7 +2,7 @@
 
 # 团队与分工
 
-目前，在系统分析与设计课程中，团队有 6 位成员，4个部分
+目前，在系统分析与设计课程中，团队有5位成员，4个部分
 
 
 （名字里带有 * 表示他/她是分项负责人）
@@ -11,12 +11,11 @@
 
 |学号|昵称|Github|岗位角色|
 |:--:|:--:|:--:|:--:|
-|16340213|阿里武|[wangjiwu](https://github.com/wangjiwu)|项目经理、产品经理，架构师|
-|16340204|汤小纪|[tanghaoling](https://github.com/)|客户经理、UI/UX设计师，QA 工程师|
-|16340205|小鹏|[Walikrence](https://github.com/Walikrence)|Python工程师， 数据库DBA|
+|16340213|阿里武*|[wangjiwu](https://github.com/wangjiwu)|项目经理、产品经理，架构师|
+|16340204|汤小纪*|[tanghaoling](https://github.com/)|客户经理、UI/UX设计师，QA 工程师|
+|16340205|小鹏*|[Walikrence](https://github.com/Walikrence)|Python工程师， 数据库DBA|
 |16340111|李冰|[libing](https://github.com/)|Python工程师，数据库DBA|
-|15353005|范瑞潮|[fanweichao](https://github.com/)|Js工程师， DevOps 工程师|
-|16340204|汤小纪|[ZhangJiaQiao](https://github.com/)|Js工程师|
+|15353005|范瑞潮*|[fanweichao](https://github.com/)|Js工程师， DevOps 工程师|
 
 
 
@@ -25,3 +24,7 @@
 |昵称|分工内容|个人宣言|
 |:--:|:--:|:--:|
 |阿里武|负责项目实行的质量、安全、进度、成本管理的整体掌控， 文档编写|再迭代它一轮|
+|汤小纪|负责UI设计， 市场调研， 测试||
+|小鹏|负责后端开发，API编写，数据库设计||
+|李冰|负责后端开发，API编写，数据库设计||
+|范瑞潮|负责前端实现||
