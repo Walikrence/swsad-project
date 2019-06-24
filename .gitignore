@@ -29,3 +29,27 @@ back-ground-work/mypro/users/__pycache__/views.cpython-35.pyc
 back-ground-work/mypro/users/migrations/__pycache__/0001_initial.cpython-35.pyc
 back-ground-work/mypro/users/migrations/__pycache__/0002_auto_20190623_0502.cpython-35.pyc
 back-ground-work/mypro/users/migrations/__pycache__/__init__.cpython-35.pyc
+
+
+# fronted
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
