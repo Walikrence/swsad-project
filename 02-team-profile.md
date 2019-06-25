@@ -12,10 +12,10 @@
 |学号|昵称|Github|岗位角色|
 |:--:|:--:|:--:|:--:|
 |16340213|阿里武*|[wangjiwu](https://github.com/wangjiwu)|项目经理、产品经理，架构师|
-|16340204|汤小纪*|[tanghaoling](https://github.com/)|客户经理、UI/UX设计师，QA 工程师|
+|16340204|汤小纪*|[13326651141](https://github.com/13326651141)|客户经理、UI/UX设计师，QA 工程师|
 |16340205|小鹏*|[Walikrence](https://github.com/Walikrence)|Python工程师， 数据库DBA|
-|16340111|李冰|[libing](https://github.com/)|Python工程师，数据库DBA|
-|15353005|范瑞潮*|[fanweichao](https://github.com/)|Js工程师， DevOps 工程师|
+|16340111|李冰|[Lyrix28](https://github.com/Lyrix28)|Python工程师，数据库DBA|
+|15353005|范瑞潮*|[Sefaice](https://github.com/Sefaice)|Js工程师， DevOps 工程师|
 
 
 
