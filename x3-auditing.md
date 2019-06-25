@@ -13,13 +13,13 @@ title: 审计记录
 
 | 学号 | github-id | 标题 | issue url |
 |:--:|---|---|---|
-| 007 | linyq17 | [domain: order and memu](https://github.com/rookies-sysu/Dashboard/issues/1) |  https://github.com/rookies-sysu/Dashboard/issues/1 |
+| 16340213 | wangjiwu | [建议添加问卷分析功能](https://github.com/rookies-sysu/Dashboard/issues/1) | https://github.com/system-design2019/docs/issues/1 |
 
 ## 2、设计审计
 
 | 学号 | github-id | 标题 | issue url |
 |:--:|---|---|---|
-| 007 | linyq17 | [xxx](https://github.com/rookies-sysu/Dashboard/issues/1) |  https://github.com/rookies-sysu/Dashboard/issues/1 |
+| 16340213 | wangjiwu | [xxx](https://github.com/rookies-sysu/Dashboard/issues/1) |  https://github.com/rookies-sysu/Dashboard/issues/1 |
 
 ## 审计评分标准
 
