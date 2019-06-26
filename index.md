@@ -12,7 +12,7 @@
 
 - 5、[Product Backlog](05-backlog) （产品特性库）
 
-- 6、Requirement specification（需求规格说明书）
+- 6、[Requirement specification](06-requirements)（需求规格说明书）
 
   - [6.1 Usecase Diagram（用例图）](6.1 Usecase Diagram)
   - [6.2 Use Cases（用例+活动图）](6.2 Use Cases)
