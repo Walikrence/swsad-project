@@ -8,40 +8,65 @@ title: 看板
 
 * 目录
 {:toc}
+# 总结
 
-## 1、看板使用指南
+​		我们使用TAPD一站式敏捷研发协作云平台， 原因是因为此看板使用更简单， 同时功能丰富
 
-看板是作业评分的重要依据，你必须每周或每两周维护一个看板。
+TAPD针对研发痛点，提供贯穿敏捷研发生命周期的一站式服务，帮助我们团队提升研发效率，高质量交付成功产品。
 
-使用看板管理项目的工具很多，如 github project，[TAPD](https://www.tapd.cn/)，tower ... [Taiga](https://taiga.io/)，[atteam](https://www.atteam.cn/sign/Index.aspx) 等。对于软件项目，我们一般关注以下方面的支持：
+​		我们使用里面的迭代，创建需求和子需求， 然后进行工作分配
 
-* Scrum 
-* KANBAN
-* Bug tracing
+![forum_1477224759_46.png (1351Ã424)](https://file.tapd.cn//tfl/pictures/201610/forum_1477224759_46.png)
 
-作为课程，你必须维护一个 **在线可访问** 的看板列表，以下以 Github 为例：
-
-例如：
-
-![](images/kanban-list.png)
+每个开发任务能够在工作台查看自己领到的需求， 规划进度。
 
 
-每个看板可以是标准格式，也可以是你喜欢的其他格式
 
-![](images/kanban-standard.png)
 
-## 2、评分指南
 
-* 看板持续性
-* 任务粒度合理性
-* 任务分配均衡性
-* 完成情况合理性
-    - 完成率一般会谁时间越来越高（表示任务估算能力提升）
-    - 每次 100% 完成一定是造假
+## 看板规划
 
-## 参考案例
 
-1. [project KANBAN](https://github.com/2018SystemAnalysis/Wechat-Odering-System/projects)
+
+### 第一次迭代看板
+
+![](images\看板\看板0.png)
+
+### 第二次迭代看板
+
+![](images\看板\看板1.png)
+
+### 第三次迭代看板
+
+![](images\看板\看板2.png)
+
+### 第4次迭代看板
+
+![](images\看板\看吧3.png)
+
+## 迭代规划
+
+
+
+### 第一次迭代
+
+![](images\看板\迭代1.png)
+
+### 第二次迭代
+
+![](images\看板\迭代2.png)
+
+### 第三次迭代
+
+![](images\看板\迭代3.png)
+
+### 第4次迭代
+
+![](images\看板\迭代4.png)
+
+**可以看到完成度在逐渐增加, 我们的规划更加合理，迭代的内容也能完全实现**
+
+
 
 
 

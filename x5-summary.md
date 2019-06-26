@@ -27,21 +27,37 @@ title: 个人/小组总结
 
 1. [15331253-ECer23 Final Report](https://www.jianshu.com/p/edae2a252471)
 
-## 2、小组总结指南
+## 2、小组总结
 
 * PSP2.1 汇总表（每人一列）
+
+
+
 * 项目所有仓库贡献图表截图
+
+  
+
 * 综合贡献度分配
 
-| 制品 | &nbsp; | 成员1 | 成员2 | ... | 外援 |
-|------|--------|------|-------|-----|-----|
-|源代码|前端代码。仓库名称| 10% | 20% |60%| 10% |
-|&nbsp;| xx，仓库名称| 100%| &nbsp;|&nbsp;|&nbsp;|
-|分析与设计|UI设计| &nbsp;  | 80% |&nbsp;| 20% |
-|综合贡献| &nbsp;| 20%  | 30% | 50% |&nbsp;  |
 
-## 最终评分指南
 
-* 原则上按小组自我贡献分配成绩，但不排除修改的可能
-* x1-x5 是评价一个团队与个人贡献的最重要指标
-* 项目评分与个人评分具有一定主观性，文档态度非常重要！
+- 制品与贡献率
+
+| 制品     | 地址                                                         | 汤万鹏 | 范瑞潮 | 王继武 | 汤浩林 | 李冰 |
+| -------- | ------------------------------------------------------------ | ------ | ------ | ------ | ------ | ---- |
+| 源代码   | [前端代码](https://github.com/Walikrence/swsad-project/tree/master/fore-ground-work) |        | 100%   |        |        |      |
+|          | [后端代码](https://github.com/Walikrence/swsad-project/tree/master/managerwork) | 60%    |        |        |        | 40%  |
+| UI设计   | [UI](https://walikrence.github.io/swsad-project/07.1%20UI%20design)设计文档 |        | 80%    | 10%    | 90%    |      |
+| 项目设计 | [需求规格说明书](https://walikrence.github.io/swsad-project/06-requirements) |        |        | 70%    | 30%    |      |
+|          | [设计说明书](https://walikrence.github.io/swsad-project/07-designs) | 25%    | 20%    | 30%    | 10%    | 15%  |
+|          | [生产规范与指南](https://walikrence.github.io/swsad-project/8.1%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83) |        |        | 80%    | 20%    |      |
+|          | [数据库设计](https://walikrence.github.io/swsad-project/07.2 Database design) | 70%    |        |        |        | 30%  |
+|          | [接口 API 设计](https://walikrence.github.io/swsad-project/07.3 Interface API design) | 40%    | 40%    |        |        | 20%  |
+|          | [用例设计](https://walikrence.github.io/swsad-project/07.5 Usecase design) |        |        | 75%    | 25%    |      |
+|          | [ 架构设计、详细设计（BCE方法）到应用程序框架映射指南](https://walikrence.github.io/swsad-project/8.3 架构设计) |        |        | 60%    | 40%    |      |
+| 报告     | [技术报告](https://walikrence.github.io/swsad-project/x4-techniques) | 20%    | 20%    | 20%    | 20%    | 20%  |
+|          | [最终报告](https://walikrence.github.io/swsad-project/x5-summary) | 20%    | 20%    | 20%    | 20%    | 20%  |
+| 综合贡献 |                                                              | 27%    | 27%    | 20%    | 16%    | 10%  |
+
+
+
