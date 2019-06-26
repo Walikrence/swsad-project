@@ -19,7 +19,7 @@ title: 审计记录
 
 | 学号 | github-id | 标题 | issue url |
 |:--:|---|---|---|
-| 16340213 | wangjiwu | [xxx](https://github.com/rookies-sysu/Dashboard/issues/1) |  https://github.com/rookies-sysu/Dashboard/issues/1 |
+| 16340213 | wangjiwu | [设计审计](https://github.com/system-design2019/docs/issues/2) | https://github.com/system-design2019/docs/issues/2 |
 
 ## 审计评分标准
 
