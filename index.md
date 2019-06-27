@@ -56,7 +56,7 @@
 
 - X4 [技术报告](x4-techniques)
 
-  
+  - [16340213-王继武——Umlet和draw.io 使用心得](https://blog.csdn.net/qq874455953/article/details/93887459)
 
 - X5 [最终报告](x5-summary)
 
