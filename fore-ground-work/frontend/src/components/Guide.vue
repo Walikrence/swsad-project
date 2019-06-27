@@ -11,7 +11,7 @@
       <!-- not login -->
       <div v-if="userInfo==null">
         <a-button type="primary" class="button-sign" @click="jumpToSignin">登录</a-button>
-        <button @click="signoutClick">signout</button>
+        <a-button type="primary" class="button-sign" @click="signoutClick">登出</a-button>
       </div>
       <!-- already login -->
       <div v-else class="header-account-avatar">
@@ -139,6 +139,7 @@ export default {
 
 .button-sign {
   margin-top: 15px;
+  margin-left: 5px;
   width: 100px;
   height: 30px;
 }

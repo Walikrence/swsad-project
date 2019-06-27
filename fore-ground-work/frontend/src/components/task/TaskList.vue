@@ -8,7 +8,7 @@
   </div>
   <div class="list-container">
     <a-list itemLayout="vertical" size="large" :dataSource="taskList">
-      <a-list-item slot="renderItem" slot-scope="item, index">
+      <a-list-item slot="renderItem" slot-scope="item">
         <a-card hoverable :title="item.title" @click="taskClick(item)">
           <span class="list-card-time">{{tmptaskinfo1}}</span>
           <span class="list-card-name">{{tmptaskinfo2}}</span>

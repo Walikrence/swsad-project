@@ -12,14 +12,14 @@
       <div v-if="q.type=='single'">
         <div class="qn-title">{{i+1}}. {{q.name}}</div>
         <a-radio-group v-model="q.answer">
-          <a-radio class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1]" >{{q.choices[j-1]}}</a-radio>
+          <a-radio class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1].text" >{{q.choices[j-1].text}}</a-radio>
         </a-radio-group>
       </div>
       <!-- 多选题 -->
       <div v-else-if="q.type=='multi'">
         <div class="qn-title">{{i+1}}. {{q.name}}</div>
         <a-checkbox-group v-model="q.answer">
-          <a-checkbox class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1]">{{q.choices[j-1]}}</a-checkbox>
+          <a-checkbox class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1]">{{q.choices[j-1].text}}</a-checkbox>
         </a-checkbox-group>
       </div>
       <!-- 填空题 -->
@@ -29,7 +29,7 @@
       </div>
     </div>
     <!-- 问题列表结束 -->
-    <a-button type="primary" class="new-qn-button" @click="newQn">提交</a-button>
+    <a-button type="primary" class="new-qn-button" @click="fillQn">提交</a-button>
   </div>
 </div>
 </template>
@@ -42,6 +42,7 @@ export default {
     return {
       qn: {
         title: '最喜欢的乐队调查',
+        id: null,
         q: [
           // { type: 'single', name: '你平时听歌的频率', cnum: 3, choices: ['每天', '每周一到两次', '更少'], answer: null },
           // { type: 'multi', name: '你平时听以下哪些歌手的音乐', cnum: 5, choices: ['林宥嘉', '林俊杰', 'Oasis', 'The Cranberries', '吴亦凡'], answer: null },
@@ -55,20 +56,27 @@ export default {
   },
   created: function () {
     var tQn = this.$route.params.qn
+    // console.log(JSON.stringify(tQn))
     // parse quiestionnaire to qn format below
     this.qn.title = tQn.title
+    this.qn.id = tQn.id
     var tQ
     for (let i = 0; i < tQn.Question_select.length; i++) { // select questions
       tQ = tQn.Question_select[i]
       var q = {
         type: tQ.mytype === '单选' ? 'single' : 'multi',
         name: tQ.title,
+        id: tQ.id,
         cnum: tQ.option_num,
         choices: [],
         answer: null
       }
       for (let j = 0; j < tQ.option.length; j++) {
-        q.choices.push(tQ.option[j].text)
+        q.choices.push({
+          text: tQ.option[j].text,
+          id: tQ.option[j].id,
+          select: false
+        })
       }
       this.qn.q.push(q)
     }
@@ -77,21 +85,14 @@ export default {
       this.qn.q.push({
         type: 'text',
         name: tQ.title,
+        id: tQ.id,
         answer: null
       })
     }
   },
   methods: {
-    addSingle: function () {
-      this.qn.q.push({ type: 'single', name: '', cnum: 1, choices: [] })
-    },
-    addMulti: function () {
-      this.qn.q.push({ type: 'multi', name: '', cnum: 1, choices: [] })
-    },
-    addText: function () {
-      this.qn.q.push({ type: 'text', name: '' })
-    },
-    newQn: function () {
+    fillQn: function () {
+      console.log(JSON.stringify(this.qn))
     }
   },
   computed: {

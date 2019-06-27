@@ -141,6 +141,10 @@ export default {
             this.$message.error(resp.message)
             this.$router.push({ path: '/guide/myQnList' })
           }
+          if (resp.code === 4) { // not creater
+            this.$message.error(resp.message)
+            this.$router.push({ path: '/guide/myQnList' })
+          }
           if (resp.code === 3) { // success
             this.$message.success('删除问卷成功')
             this.$router.push({ path: '/guide/myQnList' })
