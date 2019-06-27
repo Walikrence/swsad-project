@@ -77,3 +77,16 @@ def register(request):
 			return HttpResponse(json.dumps(resp), content_type="application/json")
 	return HttpResponse("Hello, world. You're at the register.")
 
+@csrf_exempt
+def signout(request):
+	if request.method == 'POST':
+		message = '醒醒，你还没登陆呢'
+		if not request.session.get('is_signin'):
+			resp = {'message': message,'code' : 1}
+			return HttpResponse(json.dumps(resp), content_type="application/json")
+		request.session.flush()
+		# del request.session['is_login']
+		message = '退出登陆成功'
+		resp = {'message': message,'code' : 2}
+		return HttpResponse(json.dumps(resp), content_type="application/json")
+	return HttpResponse("Hello, world. You're at the signout.")
