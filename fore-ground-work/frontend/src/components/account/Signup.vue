@@ -76,14 +76,14 @@ export default {
       }
       //
       axios
-        .post('/api/users/register/', {
+        .post('/users/register/', {
           username: this.account,
           password: this.password,
           email: this.email
         })
         .then((response) => {
           var resp = response.data
-          console.log(resp)
+          // console.log(resp)
           if (resp.code === 1) { // username already taken
             this.$message.warning(resp.message)
             return

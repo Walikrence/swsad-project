@@ -131,7 +131,7 @@ export default {
     },
     deleteOk: function () {
       axios
-        .post('/api/paper/delete/', {
+        .post('/paper/delete/', {
           title: this.qn.title,
           id: this.qn.id
         })

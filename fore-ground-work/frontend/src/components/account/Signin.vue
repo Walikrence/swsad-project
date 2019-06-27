@@ -50,13 +50,13 @@ export default {
       }
       //
       axios
-        .post('/api/users/signin/', {
+        .post('/users/signin/', {
           username: this.account,
           password: this.password
         })
         .then((response) => {
           var resp = response.data
-          console.log(resp)
+          // console.log(resp)
           if (resp.code === 0) { // already login
             this.$message.warning(resp.message)
             return

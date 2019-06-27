@@ -12,14 +12,14 @@
       <div v-if="q.type=='single'">
         <div class="qn-title">{{i+1}}. {{q.name}}</div>
         <a-radio-group v-model="q.answer">
-          <a-radio class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1].text" >{{q.choices[j-1].text}}</a-radio>
+          <a-radio class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1].id">{{q.choices[j-1].text}}</a-radio>
         </a-radio-group>
       </div>
       <!-- 多选题 -->
       <div v-else-if="q.type=='multi'">
         <div class="qn-title">{{i+1}}. {{q.name}}</div>
         <a-checkbox-group v-model="q.answer">
-          <a-checkbox class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1]">{{q.choices[j-1].text}}</a-checkbox>
+          <a-checkbox class="qn-choice" v-for="j in q.cnum" :key="j" :value="q.choices[j-1].id">{{q.choices[j-1].text}}</a-checkbox>
         </a-checkbox-group>
       </div>
       <!-- 填空题 -->
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 
 export default {
   data: function () {
@@ -71,11 +71,10 @@ export default {
         choices: [],
         answer: null
       }
-      for (let j = 0; j < tQ.option.length; j++) {
+      for (let j = 0; j < tQ.option.length; j++) { // choices
         q.choices.push({
           text: tQ.option[j].text,
-          id: tQ.option[j].id,
-          select: false
+          id: tQ.option[j].id
         })
       }
       this.qn.q.push(q)
@@ -92,7 +91,68 @@ export default {
   },
   methods: {
     fillQn: function () {
-      console.log(JSON.stringify(this.qn))
+      if (this.progressPercent !== 100) {
+        this.$message.warning('请填写所有问题')
+        return
+      }
+      // parse to api format
+      // console.log(JSON.stringify(this.qn))
+      var tSelectA = []
+      var tFillA = []
+      for (let i = 0; i < this.qn.q.length; i++) {
+        let que = this.qn.q[i]
+        let tque = {}
+        if (que.type !== 'text') { // select question
+          tque = {
+            id: que.id,
+            option: []
+          }
+          for (let j = 0; j < que.choices.length; j++) {
+            let op = que.choices[j]
+            let top = {
+              id: op.id,
+              select: false
+            }
+            if (que.type === 'single') { // parse answer to if_select
+              if (que.answer === op.id) {
+                top.select = true
+              }
+            } else {
+              if (que.answer.includes(op.id)) {
+                top.select = true
+              }
+            }
+            tque.option.push(top)
+          }
+          tSelectA.push(tque)
+        } else { // fill question
+          tque = {
+            id: que.id,
+            answer: que.answer
+          }
+          tFillA.push(tque)
+        }
+      }
+      // console.log(JSON.stringify(tSelectA))
+      // console.log(JSON.stringify(tFillA))
+      // post
+      axios
+        .post('/paper/fill/', {
+          id: this.qn.id,
+          Question_select: tSelectA,
+          Question_fill: tFillA
+        })
+        .then((response) => {
+          var resp = response.data
+          if (resp.code === 2) { // invalid format
+            this.$message.error(resp.message)
+          }
+          if (resp.code === 3) { // success
+            this.$message.success('填写问卷成功')
+            this.$router.push({ path: '/guide/allQnList' })
+          }
+        })
+        .catch((error) => this.$message.error(error))
     }
   },
   computed: {

@@ -57,7 +57,7 @@ export default {
     },
     signoutClick: function () {
       axios
-        .post('/api/users/signout/', {
+        .post('/users/signout/', {
           username: this.userInfo
         })
         .then((response) => {

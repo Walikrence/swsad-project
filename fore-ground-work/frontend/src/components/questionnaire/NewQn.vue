@@ -64,11 +64,11 @@
 <script>
 import axios from 'axios'
 
-// debug axios
-axios.interceptors.request.use(request => {
-  console.log('Client Request Debug: ', request)
-  return request
-})
+// // debug axios
+// axios.interceptors.request.use(request => {
+//   console.log('Client Request Debug: ', request)
+//   return request
+// })
 
 export default {
   data: function () {
@@ -148,7 +148,7 @@ export default {
       // console.log(JSON.stringify(tFillQ))
       // post
       axios
-        .post('/api/paper/create/', {
+        .post('/paper/create/', {
           title: this.qn.title,
           select_question_num: tSelectQ.length,
           fill_question_num: tFillQ.length,
@@ -157,7 +157,7 @@ export default {
         })
         .then((response) => {
           var resp = response.data
-          console.log(resp)
+          // console.log(resp)
           if (resp.code === 3) { // success
             this.$message.success('创建问卷成功')
             this.$router.push({ path: '/guide/qnHome' })

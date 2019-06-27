@@ -33,7 +33,7 @@ export default {
   },
   created: function () {
     axios
-      .post('/api/paper/query/', {
+      .post('/paper/query/', {
         username: this.userInfo
       })
       .then((response) => {

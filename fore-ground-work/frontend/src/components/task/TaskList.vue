@@ -56,7 +56,7 @@ export default {
       this.$router.push({ path: '/guide/newTask' })
     },
     taskClick: function (task) {
-      console.log(task)
+      // console.log(task)
       this.$router.push({ path: '/guide/taskDetail' })
     }
   }
