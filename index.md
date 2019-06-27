@@ -40,7 +40,9 @@
 
   - [界面短视频]()
 
-    
+ 
+
+​    
 
 - X1 meeting-records
 
@@ -53,22 +55,35 @@
 - X2 [看板](X2-kanban)
 
 - X3 [审计记录](x3-auditing)
+   - [16340204-汤浩林——需求审计](https://github.com/system-design2019/files/issues/5)
+   - [16340204-汤浩林——设计审计](https://github.com/system-design2019/files/issues/6)
+   - [16340111-李冰——技术审计](https://github.com/system-design2019/files/issues/1)
+   - [16340111-李冰——需求审计](https://github.com/system-design2019/files/issues/2)
+   - [16340213-王继武——设计审计](https://github.com/system-design2019/docs/issues/2)
+   - [16340213-王继武——需求审计](https://github.com/system-design2019/docs/issues/1)
+   - [15353005-范瑞潮——设计审计](https://github.com/TeamWeGo/source_code/issues/40)
+   - [15353005-范瑞潮——需求审计](https://github.com/TeamWeGo/source_code/issues/4)
+
+   
 
 - X4 [技术报告](x4-techniques)
 
   - [16340213-王继武——Umlet和draw.io 使用心得](https://blog.csdn.net/qq874455953/article/details/93887459)
-
   - [16340213-汤浩林——产品开发设计心得](https://blog.csdn.net/T13326651141/article/details/93892984)
   - [15353005-范瑞潮——前端技术报告](https://github.com/Walikrence/swsad-project/blob/master/fore-ground-work/report/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.md)
+  - [16340111-李冰——后端开发心得](https://lyrix28.github.io/2019/06/26/django/)
+
+
+
 
 - X5 [最终报告](x5-summary)
 
   - [16340213-王继武-最终报告](个人报告\16340213-个人报告)
-
   - [163402104-汤浩林-最终报告](个人报告\16340204-个人报告)
   - [15353005-范瑞潮-最终报告](个人报告\15353005-个人报告)
 
-    
+、
 
-  
+
+
 

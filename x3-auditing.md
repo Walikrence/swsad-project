@@ -14,12 +14,18 @@ title: 审计记录
 | 学号 | github-id | 标题 | issue url |
 |:--:|---|---|---|
 | 16340213 | wangjiwu | [建议添加问卷分析功能](https://github.com/system-design2019/docs/issues/1) | https://github.com/system-design2019/docs/issues/1 |
+| 16340204 | tanghaolin |  | https://github.com/system-design2019/files/issues/5 |
+| 16340111 | libing |  | https://github.com/system-design2019/files/issues/2 |
+| 15353005 | fanruichao |  | https://github.com/TeamWeGo/source_code/issues/4 |
 
 ## 2、设计审计
 
 | 学号 | github-id | 标题 | issue url |
 |:--:|---|---|---|
 | 16340213 | wangjiwu | [设计审计](https://github.com/system-design2019/docs/issues/2) | https://github.com/system-design2019/docs/issues/2 |
+| 16340213 | tanghaolin |  | https://github.com/system-design2019/files/issues/6 |
+| 16340111 | libing |  | https://github.com/system-design2019/files/issues/1 |
+| 15353005 | fanruichao |  | https://github.com/TeamWeGo/source_code/issues/40 |
 
 ## 审计评分标准
 
