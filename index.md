@@ -38,8 +38,8 @@
 
 - 9、成品展示
 
-  - [界面短视频]()
-
+  - [界面短视频](http://www.wangjiwu.com/index.php/2019/06/28/helphelpbabydemo/)   （密码sysu2019）
+  - [使用手册] (https://github.com/Walikrence/swsad-project/blob/master/%E5%AE%9E%E8%B7%B5%E9%9C%80%E6%8F%90%E4%BA%A4%E6%96%87%E6%A1%A3/pdf%E6%96%87%E6%A1%A3-md%E8%BD%AC%E6%88%90%E7%9A%84pdf/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.pdf)
  
 
 ​    
