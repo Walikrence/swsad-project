@@ -18,15 +18,28 @@
 
 <script>
 // import axios from 'axios'
+import { mapState } from 'vuex'
 
 export default {
   data: function () {
     return {
     }
   },
+  computed: {
+    ...mapState(['userInfo'])
+  },
   methods: {
     taskClick: function () {
-      this.$router.push({ path: '/guide/taskList' })
+      if (this.userInfo === 'testtest') {
+        this.$router.push({
+          name: 'taskList',
+          params: {
+            newTask: 0
+          }
+        })
+      } else {
+        this.$router.push({ path: '/guide/taskList' })
+      }
     },
     tradeClick: function () {
     }

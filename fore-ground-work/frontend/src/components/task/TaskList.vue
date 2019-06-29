@@ -33,22 +33,18 @@ export default {
         {
           title: '任务2',
           content: []
-        },
-        {
-          title: '任务3',
-          content: []
-        },
-        {
-          title: '任务4',
-          content: []
-        },
-        {
-          title: '任务5',
-          content: []
         }
       ],
-      tmptaskinfo1: '发布人: 2019-05-25',
-      tmptaskinfo2: '发布时间: kris wu'
+      tmptaskinfo1: '发布人: 2019-06-27',
+      tmptaskinfo2: '发布时间: testtest'
+    }
+  },
+  created: function () {
+    if (this.$route.params.newTask !== 0) {
+      this.taskList.push({
+        title: '拿快递',
+        content: []
+      })
     }
   },
   methods: {

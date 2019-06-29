@@ -30,7 +30,7 @@
       <div class="task-title">任务报酬: </div>
       <a-input class="task-input" v-model="reward" />
     </div>
-    <a-button type="primary" class="new-task-button">存为草稿</a-button>
+    <!-- <a-button type="primary" class="new-task-button">存为草稿</a-button> -->
     <a-button type="primary" class="new-task-button" @click="newTask">发布任务</a-button>
   </div>
 </div>
@@ -47,6 +47,17 @@ export default {
       place: null,
       content: null,
       reward: null
+    }
+  },
+  methods: {
+    newTask: function () {
+      this.$message.success('发布任务成功')
+      this.$router.push({
+        name: 'taskList',
+        params: {
+          newTask: 1
+        }
+      })
     }
   }
 }
