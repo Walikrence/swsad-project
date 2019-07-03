@@ -26,7 +26,8 @@
   - [8.3 架构设计、详细设计（BCE方法）到应用程序框架映射指南](8.3 架构设计)
   - [8.4 部署说明](8.4 部署说明)
 - 9、成品展示
-  - [界面短视频]()
+  - [界面短视频](http://www.wangjiwu.com/index.php/2019/06/28/helphelpbabydemo/)
+  - [使用手册](https://github.com/Walikrence/swsad-project/blob/master/实践需提交文档/pdf文档-md转成的pdf/软件使用手册.pdf)
 
  
 
